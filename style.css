@@ -1,0 +1,898 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Noto Sans TC", sans-serif;
+    background: #f7f8f5;
+    color: #263238;
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 24px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    z-index: 100;
+
+    background: rgba(247, 248, 245, 0.85);
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #718995;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(247, 248, 245, 0.96) 0%,
+            rgba(247, 248, 245, 0.80) 45%,
+            rgba(247, 248, 245, 0.25) 100%
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    max-width: 720px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #718995;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(48px, 7vw, 88px);
+
+    line-height: 1.15;
+
+    font-weight: normal;
+
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    max-width: 520px;
+
+    color: #68737a;
+
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 13px 26px;
+
+    border-radius: 50px;
+
+    background: #263238;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   Section
+========================= */
+
+section {
+    padding: 130px 8%;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #718995;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   About
+========================= */
+
+.about {
+    background: white;
+}
+
+.about-content {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+.about-photo {
+    width: 100%;
+    max-width: 480px;
+
+    border-radius:
+        180px
+        180px
+        12px
+        12px;
+
+    overflow: hidden;
+}
+
+.about-photo img {
+    width: 100%;
+    display: block;
+}
+
+.about-text {
+    max-width: 560px;
+}
+
+.about-text h3 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: #68737a;
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   Portfolio
+========================= */
+
+.portfolio {
+    background: #f7f8f5;
+}
+
+.portfolio-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 35px;
+}
+
+.portfolio-card {
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-6px);
+}
+
+.portfolio-image {
+
+    aspect-ratio: 4 / 3;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-placeholder {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #dce5e1;
+
+    color: #63777f;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+.portfolio-card > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #718995;
+}
+
+.portfolio-card h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    font-weight: normal;
+
+    margin: 6px 0;
+}
+
+.portfolio-card span {
+    color: #68737a;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Contact
+========================= */
+
+.contact {
+    background: white;
+}
+
+.contact-text p {
+    color: #68737a;
+    margin-bottom: 15px;
+}
+
+.contact-text a {
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    border-bottom: 1px solid #263238;
+
+    padding-bottom: 5px;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+
+    padding: 25px 8%;
+
+    background: #263238;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   手機版
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 120px 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    section {
+        padding: 90px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 50px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   作品介紹視窗
+========================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(38, 50, 56, 0.55);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 999;
+}
+
+.modal.show {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    background: #ffffff;
+
+    padding: 55px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.18);
+
+    transform: translateY(20px);
+
+    transition: 0.3s;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 18px;
+
+    right: 22px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    font-weight: 300;
+
+    cursor: pointer;
+
+    color: #68737a;
+}
+
+.modal-category {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #718995;
+
+    margin-bottom: 12px;
+}
+
+.modal-content h2 {
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    font-weight: normal;
+
+    line-height: 1.3;
+
+    margin-bottom: 22px;
+}
+
+.modal-content p:last-child {
+    color: #68737a;
+
+    line-height: 2;
+}
+
+
+/* 手機版 */
+
+@media (max-width: 600px) {
+
+    .modal-content {
+        padding: 40px 25px;
+    }
+
+    .modal-content h2 {
+        font-size: 30px;
+    }
+
+}
+
+/* =========================
+   Hero 個人化
+========================= */
+
+.hero-name {
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: #526b77;
+    margin-bottom: 18px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.hero-button.outline {
+    background: transparent;
+    color: #263238;
+    border: 1px solid rgba(38, 50, 56, 0.25);
+}
+
+.hero-button.outline:hover {
+    background: white;
+}
+
+/* =========================
+   About Resume Cards
+========================= */
+
+.about-intro {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    color: #263238;
+    margin-bottom: 25px;
+}
+
+.resume-grid {
+
+    margin-top: 100px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.resume-card {
+
+    background: #f7f8f5;
+
+    padding: 32px 28px;
+
+    min-height: 240px;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.resume-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.07);
+}
+
+.resume-label {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #718995;
+
+    margin-bottom: 25px;
+}
+
+.resume-card h3 {
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin-bottom: 15px;
+}
+
+.resume-card > p:not(.resume-label) {
+
+    font-size: 14px;
+
+    color: #68737a;
+
+    line-height: 1.9;
+}
+
+.resume-card span {
+
+    display: block;
+
+    margin-top: 20px;
+
+    font-size: 11px;
+
+    color: #9aa4a8;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   Resume Mobile
+========================= */
+
+@media (max-width: 900px) {
+
+    .resume-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .resume-grid {
+
+        grid-template-columns: 1fr;
+
+        margin-top: 70px;
+    }
+
+    .resume-card {
+
+        min-height: auto;
+    }
+
+}
+
+/* =========================
+   Portfolio Info
+========================= */
+
+.portfolio-info {
+    padding-top: 18px;
+}
+
+.portfolio-info p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #718995;
+    margin-bottom: 5px;
+}
+
+.portfolio-info h3 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.portfolio-info span {
+    color: #68737a;
+    font-size: 14px;
+}
+
+
+/* 讓整個作品卡片看起來可以點 */
+
+.portfolio-card {
+    cursor: pointer;
+}
+
+/* =========================
+   Modal Link
+========================= */
+
+.modal-link {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 11px 22px;
+
+    border-radius: 50px;
+
+    background: #263238;
+
+    color: white;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.modal-link:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   Contact
+========================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.contact-text {
+    max-width: 500px;
+}
+
+.contact-text p {
+    color: #68737a;
+
+    margin-bottom: 20px;
+}
+
+.contact-text > a {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    border-bottom: 1px solid #263238;
+
+    padding-bottom: 5px;
+}
+
+.contact-links {
+    border-top: 1px solid rgba(38, 50, 56, 0.12);
+}
+
+.contact-link {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 24px 0;
+
+    border-bottom: 1px solid rgba(38, 50, 56, 0.12);
+
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    padding-left: 10px;
+}
+
+.contact-link span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #718995;
+}
+
+.contact-link strong {
+    font-size: 15px;
+
+    font-weight: 400;
+}
+
+
+/* 手機版 */
+
+@media (max-width: 768px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .contact-text > a {
+        font-size: 24px;
+    }
+
+    .contact-link {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+}
+
+/* =========================
+   網站動畫
+========================= */
+
+.portfolio-card,
+.resume-card,
+.contact-link,
+.hero-button {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        padding 0.3s ease,
+        background 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+}
+
+.resume-card:hover {
+    transform: translateY(-6px);
+}
+
+.contact-link:hover {
+    padding-left: 10px;
+}
+
+
+/* 圖片放大效果 */
+
+.portfolio-image {
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    transition: transform 0.6s ease;
+}
+
+.portfolio-card:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+
+/* Hero 按鈕 */
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* 滑動進場 */
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+section.show-section {
+    opacity: 1;
+    transform: translateY(0);
+}
