@@ -21,10 +21,10 @@ function openProject(project) {
             <strong>作品介紹</strong><br>
             以兒少觀眾為主要受眾的內容企劃，
             嘗試從年輕觀眾的生活與興趣出發，
-            設計具有娛樂性與新聞價值的節目內容。<br><br>
+            設計具有娛樂性與價值的節目內容。<br><br>
 
             <strong>我的角色</strong><br>
-            節目企劃、內容發想、受眾設定與單元設計。
+            協助節目企劃、內容發想、樣帶攝影、初剪。
         `;
 
         modalLink.href =
@@ -52,7 +52,7 @@ function openProject(project) {
             以及學生參與體育活動的意願。<br><br>
 
             <strong>我的角色</strong><br>
-            資料蒐集、研究設計、內容分析與成果整理。
+            資料蒐集、研究設計、內容分析、實際訪談與成果整理。
         `;
 
         modalLink.href =
@@ -80,7 +80,7 @@ function openProject(project) {
             以及只有在現場才能感受到的瞬間。<br><br>
 
             <strong>我的角色</strong><br>
-            攝影、構圖、現場觀察與影像紀錄。
+            攝影、現場觀察與影像紀錄。
         `;
 
         modalLink.href =
